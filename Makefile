@@ -11,14 +11,9 @@ mandatory/sort/sort.c  mandatory/sort/order.c mandatory/sort/small_sort.c
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
-	
-bonus : $(NAME_BONUS)
 
 $(NAME) : $(OBJ)
 	$(CC) $(OBJ) -o $@
-
-$(NAME_BONUS) : $(OBJ_BONUS)
-	$(CC) $(OBJ_BONUS) -o $@
 
 mandatory/%.o : mandatory/%.c mandatory/push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
